@@ -32,18 +32,23 @@ folium.GeoJson(geojson).add_to(m)
 
 # Fungsi untuk membuat diagram berdasarkan hasil groupby
 def create_chart(kecamatan):
-    # Agregasi data berdasarkan Kecamatan dan block_code
+    # Agregasi data berdasarkan Kecamatan dan Block Code
     grouped_data = dataset[dataset['Kecamatan'] == kecamatan].groupby(by=['Kecamatan', 'block_code']).agg({
         "block_code": "count"
     }).rename(columns={"block_code": "count"}).reset_index()
 
     # Membuat diagram batang menggunakan hasil agregasi
-    plt.figure(figsize=(4, 2))
+    plt.figure(figsize=(6, 4))  # Meningkatkan ukuran gambar
     plt.bar(grouped_data['block_code'], grouped_data['count'], color='blue')
     plt.title(f"Kecamatan: {kecamatan}")
     plt.xlabel('block_code')
-    plt.xticks(rotation = 180)
     plt.ylabel('Jumlah Kasus')
+
+    # Menambahkan rotasi pada label sumbu x (block_code) sebesar 90 derajat
+    plt.xticks(rotation=90)
+
+    # Menggunakan tight_layout untuk menghindari label yang terpotong
+    plt.tight_layout()
 
     # Simpan diagram ke buffer dalam format PNG
     buf = BytesIO()
