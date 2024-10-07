@@ -1,4 +1,4 @@
-﻿Tanggal,Unit Layanan Medis,Diagnosis Primer,Code,Kecamatan,total_pasien,Block Code,cluster,jumlah_pasien_wilayah_scaled_scaled,Lat,Long
+﻿Tanggal,Unit Layanan Medis,Diagnosis Primer,Code,Kecamatan,total_pasien,block_code,cluster,jumlah_pasien_wilayah_scaled_scaled,Lat,Long
 2024-01,Mata,"Chorioretinal inflammation, unspecified",H30.9,Padaherang,578,Disorders of choroid and retina,0,-0.379565967,-7.549917432,108.4216188
 2024-01,Mata,"Chorioretinal inflammation, unspecified",H30.9,Pangandaran,1105,Disorders of choroid and retina,1,1.506160443,-7.683333,108.7526647
 2024-01,Mata,Senile cataract,H25,Cimerak,544,Disorders of lens,0,-0.501225735,-7.75108096,108.4391362
